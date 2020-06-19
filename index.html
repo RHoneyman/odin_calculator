@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Calculator</title>
+</head>
+<body>
+  <div id="container">
+    <h3>Calculator</h3>
+    <div id="calculator">
+      <div id="calcDisplay">
+        <div class='display' id='displayNum1'></div>
+        <div class='display' id='displayOperator'></div>
+        <div class='display' id="displayNum2"></div>
+      </div>
+      <div id="numbers">
+        <button class="calcNumbers" id="clear">Clear</button>
+        <button class="calcNumbers digits" value=7>7</button>
+        <button class="calcNumbers digits" value=8>8</button>
+        <button class="calcNumbers digits" value=9>9</button>
+        <button class="calcNumbers digits" value=4>4</button>
+        <button class="calcNumbers digits" value=5>5</button>
+        <button class="calcNumbers digits" value=6>6</button>
+        <button class="calcNumbers digits" value=1>1</button>
+        <button class="calcNumbers digits" value=2>2</button>
+        <button class="calcNumbers digits" value=3>3</button>
+        <button class="calcNumbers digits" value=0>0</button>
+        <button class="calcNumbers" id="period" value=".">.</button>
+        <button class="calcNumbers" id="posNeg">+/-</button>
+      </div>
+      <div id="operators">
+        <button class="calcOperators operators" id="divide">÷</button>
+        <button class="calcOperators operators" id="multiply">x</button>
+        <button class="calcOperators operators" id="subtract">-</button>
+        <button class="calcOperators operators" id="add">+</button>
+        <button class="calcOperators" id="equals">=</button>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/scripts.js"></script>
+</body>
+</html>
