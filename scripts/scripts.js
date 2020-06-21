@@ -59,7 +59,7 @@ let value1 = null, value2 = null, operator = null;
 clearBtn.addEventListener('click', clear);
 equalsBtn.addEventListener('click', findSolution);
 periodBtn.addEventListener('click', addPeriod);
-posNegBtn.addEventListener('click', makePositiveOrNegative);
+posNegBtn.addEventListener('click', negate);
 
 digits.forEach( (digit) => {
   digit.addEventListener('click', addValue);
@@ -124,22 +124,23 @@ function addValue(e) {
 
 }
 
-function makePositiveOrNegative() {
+function negate() {
   if (solutionFound) {
     value1 *= -1;
     displayNum1.textContent = value1;
     solutionFound = false;
     value2 = null;
     num2Selected = false;
+    value1 = String(value1);
   } else if (num2Selected) {
     value2 *= -1;
     displayNum2.textContent = value2;
+    value2 = String(value2);
   } else if (num1Selected) {
     value1 *= -1;
     displayNum1.textContent = value1;
+    value1 = String(value1);
   }
-  
-
 }
 
 function findSolution() {
