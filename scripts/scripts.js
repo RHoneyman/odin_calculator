@@ -136,7 +136,7 @@ function negate() {
     value2 *= -1;
     displayNum2.textContent = value2;
     value2 = String(value2);
-  } else if (num1Selected) {
+  } else if (num1Selected && !operatorSelected) {
     value1 *= -1;
     displayNum1.textContent = value1;
     value1 = String(value1);
