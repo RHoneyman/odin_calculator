@@ -69,6 +69,19 @@ operators.forEach( (operator) => {
   operator.addEventListener('click', selectOperator);
 });
 
+// KEYBOARD SUPPORT //
+function clickButton(e) {
+  if (e.keyCode === 13) {
+    event.preventDefault();
+  }
+  const key = document.querySelector(`button[data-key="${e.keyCode}"]`);
+  if (key != null) key.click();
+}
+
+document.addEventListener('keydown', clickButton);
+
+//////////////////////
+
 function addPeriod() {
   if (solutionFound == true) clear();
   if (!num1Selected) {
