@@ -70,6 +70,7 @@ operators.forEach( (operator) => {
 });
 
 function addPeriod() {
+  if (solutionFound == true) clear();
   if (!num1Selected) {
     num1Selected = true;
     value1 = "0.";
@@ -94,10 +95,8 @@ function addPeriod() {
 
 function addValue(e) {
   let curVal = String(e.target.value);
-  if (solutionFound == true) {
-    clear();
-  } 
-  console.log('addValue');
+  if (solutionFound == true) clear();
+
   if (!num1Selected) {
     num1Selected = true;
     value1 = curVal;
@@ -112,7 +111,7 @@ function addValue(e) {
       num2Selected = true;
       value2 = curVal;
     } else if (num2Selected) {
-      if (value2 == 0 && !value1.includes('.')) {
+      if (value2 == 0 && !value2.includes('.')) {
         value2 = curVal;
       } else if (value2.length < 9) {
         value2 = value2 + curVal;
