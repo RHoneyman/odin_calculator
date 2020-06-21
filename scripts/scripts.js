@@ -130,6 +130,7 @@ function negate() {
     displayNum1.textContent = value1;
     solutionFound = false;
     value2 = null;
+    operatorSelected = false;
     num2Selected = false;
     value1 = String(value1);
   } else if (num2Selected) {
